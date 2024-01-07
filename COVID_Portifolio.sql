@@ -1,3 +1,5 @@
+/* ------------------------------------------------------------------------------- Covid 19 Data Exploration ----------------------------------------------------------------------------------------------------------- */
+
 select *
 from ..covid
 
@@ -9,13 +11,13 @@ select location , date , total_cases , new_cases , total_deaths , population
 from ..covid
 order by 1,2
 
--- Percentage of total deaths to toal cases (for every day)
+-- Percentage of total deaths to toal cases per day
 
 select location , date , total_cases , total_deaths , (total_deaths/total_cases)*100 as DeathPercentage
 from ..covid 
 order by 1,2
 
--- Percentage of total deaths to toal cases (for every day) in Iraq
+-- Percentage of total deaths to toal cases per day in Iraq
 
 select location , date , total_cases , total_deaths , (total_deaths/total_cases)*100 as DeathPercentage
 from ..covid 
